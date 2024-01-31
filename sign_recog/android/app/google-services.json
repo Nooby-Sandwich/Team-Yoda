@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "650264255478",
+    "project_id": "signsense-7b4ee",
+    "storage_bucket": "signsense-7b4ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650264255478:android:263c7605724ec12c92c5d7",
+        "android_client_info": {
+          "package_name": "com.signrecog.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8XAtp2K-F1zeVTerasbIO8EpbQtooYnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
