@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'core/app_export.dart';
-import 'firebase_options.dart'; // Import the Firebase options
+import 'firebase_options.dart'; 
+
 
 var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
 
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
           theme: theme,
           title: 'sign_recog',
           debugShowCheckedModeBanner: false,
-          initialRoute: AppRoutes.androidLargeOneScreen,
+          initialRoute: AppRoutes.signInScreen,
           routes: AppRoutes.routes,
         );
       },

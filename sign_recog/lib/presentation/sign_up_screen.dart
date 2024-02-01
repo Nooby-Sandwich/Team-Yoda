@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:sign_recog/core/app_export.dart';
+import 'package:sign_recog/presentation/home_screen_container_screen.dart';
 import 'package:sign_recog/presentation/home_screen_page.dart';
 import 'package:sign_recog/widgets/custom_elevated_button.dart';
 import 'package:sign_recog/widgets/custom_text_form_field.dart';
@@ -40,7 +41,7 @@ class SignUpScreen extends StatelessWidget {
       // Redirect to HomeScreen
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreenPage()),
+        MaterialPageRoute(builder: (context) => HomeScreenContainerScreen()),
       );
     } catch (e) {
       // Handle signUp errors

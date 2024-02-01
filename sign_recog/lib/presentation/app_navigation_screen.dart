@@ -29,7 +29,7 @@ class AppNavigationScreen extends StatelessWidget {
                           context,
                           screenTitle: "Android Large - One",
                           onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.androidLargeOneScreen),
+                              context, AppRoutes.signInScreen),
                         ),
                         _buildScreenTitle(
                           context,

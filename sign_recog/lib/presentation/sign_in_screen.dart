@@ -7,8 +7,8 @@ import 'package:sign_recog/widgets/custom_elevated_button.dart';
 import 'package:sign_recog/widgets/custom_outlined_button.dart';
 import 'package:sign_recog/widgets/custom_text_form_field.dart';
 
-class AndroidLargeOneScreen extends StatelessWidget {
-  AndroidLargeOneScreen({Key? key}) : super(key: key);
+class SignInScreen extends StatelessWidget {
+  SignInScreen({Key? key}) : super(key: key);
 
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
