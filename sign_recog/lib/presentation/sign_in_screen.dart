@@ -6,6 +6,7 @@ import 'package:sign_recog/presentation/sign_up_screen.dart';
 import 'package:sign_recog/widgets/custom_elevated_button.dart';
 import 'package:sign_recog/widgets/custom_outlined_button.dart';
 import 'package:sign_recog/widgets/custom_text_form_field.dart';
+import 'package:sign_recog/auth_service.dart';
 
 class SignInScreen extends StatelessWidget {
   SignInScreen({Key? key}) : super(key: key);
@@ -239,20 +240,21 @@ class SignInScreen extends StatelessWidget {
 
   // Sign In with Google Button
   Widget _buildSignInWithGoogle(BuildContext context) {
-    return CustomOutlinedButton(
+    return CustomElevatedButton(
+      height: 48.v,
       text: "Sign In with Google",
       margin: EdgeInsets.only(
         left: 24.h,
         right: 35.h,
       ),
-      leftIcon: Container(
-        margin: EdgeInsets.only(right: 8.h),
-        child: CustomImageView(
-          imagePath: ImageConstant.imgGoogleOriginal,
-          height: 20.adaptSize,
-          width: 20.adaptSize,
-        ),
-      ),
+      onPressed: () async {
+        User? user = await AuthService().signInWithGoogle();
+        if (user != null) {
+          // Perform actions after successful sign-in
+        } else {
+          // Handle sign-in failure
+        }
+      },
     );
   }
 

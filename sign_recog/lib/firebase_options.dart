@@ -67,6 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '650264255478',
     projectId: 'signsense-7b4ee',
     storageBucket: 'signsense-7b4ee.appspot.com',
+    iosClientId: '650264255478-tc5qo4s8t8b15jj5gttgv9td7q1sb7i3.apps.googleusercontent.com',
     iosBundleId: 'com.signrecog.app',
   );
 
@@ -76,6 +77,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '650264255478',
     projectId: 'signsense-7b4ee',
     storageBucket: 'signsense-7b4ee.appspot.com',
+    iosClientId: '650264255478-1sk1dfbm8a549feh90btm9hsij90613j.apps.googleusercontent.com',
     iosBundleId: 'com.example.signRecog.RunnerTests',
   );
 }

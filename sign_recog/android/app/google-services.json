@@ -12,7 +12,12 @@
           "package_name": "com.signrecog.app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "650264255478-pknkianb4svuu31nubt22la9ascvq1op.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyA8XAtp2K-F1zeVTerasbIO8EpbQtooYnY"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650264255478-pknkianb4svuu31nubt22la9ascvq1op.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "650264255478-1sk1dfbm8a549feh90btm9hsij90613j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.signRecog.RunnerTests"
+              }
+            }
+          ]
         }
       }
     }
