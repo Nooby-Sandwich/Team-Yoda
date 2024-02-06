@@ -1,11 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:sign_recog/core/app_export.dart';
-import 'package:sign_recog/presentation/home_screen_container_screen.dart';
-import 'package:sign_recog/widgets/custom_elevated_button.dart';
-import 'package:sign_recog/widgets/custom_text_form_field.dart';
-import 'package:sign_recog/auth_service.dart'; 
+
+import '../auth_service.dart';
+import '../widgets/custom_elevated_button.dart';
+import '../widgets/custom_text_form_field.dart';
+import 'home_screen_container_screen.dart';
+
 class SignUpScreen extends StatelessWidget {
   SignUpScreen({Key? key}) : super(key: key);
 
@@ -68,6 +71,7 @@ class SignUpScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // Other form fields
                     CustomImageView(
                       imagePath: ImageConstant.imgSignsenseHigh,
                       height: 186.v,
@@ -96,25 +100,25 @@ class SignUpScreen extends StatelessWidget {
                     SizedBox(height: 20.v),
                     _buildFormField(" Age", ageController),
                     SizedBox(height: 20.v),
-                    _buildDropDown(" Disability", ["None", "Mute", "Other" ], (value) => disability = value),
+                    _buildDropDown(" Disability", ["None", "Mute", "Other"], (value) => disability = value),
                     SizedBox(height: 26.v),
 
                     // Inside the build method, add the following button
                     CustomElevatedButton(
-                     height: 48.v,
-                     text: "Sign Up with Google",
-                     margin: EdgeInsets.only(
+                      height: 48.v,
+                      text: "Sign Up with Google",
+                      margin: EdgeInsets.only(
                         left: 24.h,
                         right: 35.h,
-                     ),
-                     onPressed: () async {
+                      ),
+                      onPressed: () async {
                         User? user = await AuthService().signInWithGoogle();
                         if (user != null) {
                           // Perform actions after successful sign-up
                         } else {
                           // Handle sign-up failure
                         }
-                     },
+                      },
                     ),
                     _buildSignIn(context),
                     SizedBox(height: 26.v),
@@ -127,6 +131,8 @@ class SignUpScreen extends StatelessWidget {
       ),
     );
   }
+
+  // Other methods
 
   Widget _buildFormField(String label, TextEditingController controller, {bool obscureText = false}) {
     return Padding(

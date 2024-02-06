@@ -59,13 +59,13 @@ class AppNavigationScreen extends StatelessWidget {
                           context,
                           screenTitle: "Notification One",
                           onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.notificationOneScreen),
+                              context, AppRoutes.settingsScreen),
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: "Notification Two",
                           onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.notificationTwoScreen),
+                              context, AppRoutes.profileScreen),
                         ),
                       ],
                     ),
