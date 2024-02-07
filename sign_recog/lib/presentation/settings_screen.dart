@@ -64,45 +64,50 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     final ThemeData theme = _isDarkMode ? ThemeData.dark() : ThemeData.light();
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Settings'),
-      ),
-      body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Text Size',
-              style: Theme.of(context).textTheme.headline6,
+    return Builder(
+      builder: (context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text('Settings'),
+          ),
+          body: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Text Size',
+                  style: Theme.of(context).textTheme.headline6,
+                ),
+                Slider(
+                  value: _fontSize,
+                  min: 12,
+                  max: 24,
+                  onChanged: (value) {
+                    setState(() {
+                      _fontSize = value;
+                    });
+                  },
+                ),
+                SizedBox(height: 20),
+                Text(
+                  'Dark Mode',
+                  style: Theme.of(context).textTheme.headline6,
+                ),
+                CustomSwitch(
+                  value: _isDarkMode,
+                  onChange: (value) {
+                    setState(() {
+                      _isDarkMode = value;
+                      ThemeHelper().changeTheme(value ? 'dark' : 'light');
+                    });
+                  },
+                ),
+              ],
             ),
-            Slider(
-              value: _fontSize,
-              min: 12,
-              max: 24,
-              onChanged: (value) {
-                setState(() {
-                  _fontSize = value;
-                });
-              },
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Dark Mode',
-              style: Theme.of(context).textTheme.headline6,
-            ),
-            CustomSwitch(
-              value: _isDarkMode,
-              onChange: (value) {
-                setState(() {
-                  _isDarkMode = value;
-                });
-              },
-            ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }
